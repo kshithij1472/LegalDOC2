@@ -1,0 +1,191 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #eef2f7;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #333;
+}
+
+/* Container */
+.container {
+    max-width: 700px;
+    margin: 50px auto;
+    background: #ffffff;
+    padding: 30px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+}
+
+/* Header */
+h1 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+input[type="file"],
+input[type="text"] {
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    width: 85%;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input[type="file"]:hover,
+input[type="text"]:hover {
+    border-color: #007bff;
+}
+
+/* Buttons */
+button {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #0056b3, #003d80);
+    transform: scale(1.05);
+}
+
+/* Loading Animation (CSS-Only) */
+.loader {
+    display: block;
+    margin-top: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Loader Animation */
+.loader span {
+    font-size: 30px;
+    animation: scaleUpDown 1s infinite ease-in-out;
+}
+
+.loader span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+/* Fading Dots */
+@keyframes scaleUpDown {
+    0%, 100% {
+        opacity: 0.3;
+        transform: scale(0.8);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Hide Loader After 5s */
+.loader {
+    animation: fadeOut 5s forwards;
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; display: none; }
+}
+
+/* Results Section */
+#results {
+    margin-top: 25px;
+    text-align: left;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-in-out, transform 0.5s ease-in-out;
+}
+
+/* Auto-show results after loader fades out */
+.loader:has(+ #results) {
+    opacity: 1;
+}
+
+#results:has(.loader) {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Headings */
+h3 {
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* Summary Styling */
+#summary {
+    white-space: pre-line;
+    font-size: 16px;
+    line-height: 1.8;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-left: 6px solid #007bff;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+/* Chatbot Input */
+#questionInput {
+    width: 90%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 2px solid #ccc;
+    font-size: 16px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+#questionInput:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Chatbot Response */
+#chatbotResponse {
+    font-weight: bold;
+    color: #007bff;
+    margin-top: 12px;
+    font-size: 18px;
+}
+
+/* Download Report Button */
+#downloadReport {
+    background: linear-gradient(135deg, #28a745, #218838);
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#downloadReport:hover {
+    background: linear-gradient(135deg, #218838, #1c6e32);
+    transform: scale(1.05);
+}

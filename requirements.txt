@@ -1,0 +1,38 @@
+# Flask for web framework
+flask==3.0.2  
+
+# Hugging Face Transformers for text processing
+transformers==4.38.2  
+
+# Torch (Latest CPU-compatible version)
+torch==2.2.2 --index-url https://download.pytorch.org/whl/cpu  
+
+# PyMuPDF for PDF handling
+pymupdf==1.24.1  
+
+# Environment variable handling
+python-dotenv==1.0.1  
+
+# Deep Translator (Replaces unstable googletrans)
+deep-translator==1.11.4  
+
+# Microsoft Word (DOCX) file handling
+python-docx==0.8.11  
+
+# Tokenizers (Let pip find the best version)
+tokenizers  
+
+# SentencePiece (Required for some NLP tasks)
+sentencepiece==0.2.0  
+
+# Fix NumPy issue (Force NumPy <2)
+numpy<2  
+
+# OCR tool for python (Read texts from Images)
+pytesseract
+
+# Opening, Manipulating and saving many different image file formats.
+Pillow
+
+# Allows to generate PDF files
+fpdf
